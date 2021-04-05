@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  * {
+    @apply font-body tracking-wide;
+  }
+  ,
+  .main-nav-li {
+    @apply ml-5 text-center text-white hover:text-gray-300 transition duration-100;
+  }
+}
