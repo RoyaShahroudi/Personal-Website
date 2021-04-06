@@ -5,7 +5,7 @@ const About = () => {
         <div>
           <h2 className="py-4 text-2xl font-bold text-primary text-center">About Me</h2>
         </div>
-        <div className="text-footer text-center">
+        <div className="text-footer text-center text-lg">
           <p>
             I’m a computer engineering student at the Babol Noshirvani<br />
             University of Technology.<br /> I have a passion for learning new topics.<br />

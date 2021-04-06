@@ -31,7 +31,7 @@ const postItem = (props) => {
             </h3>
           </div>
           <div className="px-4 pt-10 pb-4">
-            <p>{excerpt}</p>
+            <p className="text-gray-800">{excerpt}</p>
             <div className="pt-2">
               <time className="text-gray-500 text-xs">
                 {formattedDate}

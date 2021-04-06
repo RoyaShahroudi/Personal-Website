@@ -3,14 +3,14 @@ function Footer() {
     <footer>
       <div className="bg-footer py-2">
         <div className="container mx-auto text-center">
-          <a href="#" className="text-xl mr-20 text-white hover:text-gray-300">
+          <a href="https://www.linkedin.com/in/roya-shahroudi-2ba268198/" className="text-xl mr-20 text-white hover:text-gray-300">
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" className="text-xl text-white hover:text-gray-300">
-            <i className="fab fa-instagram"></i>
+          <a href="https://dribbble.com/rah-rah" className="text-xl text-white hover:text-gray-300">
+            <i className="fab fa-dribbble"></i>
           </a>
           <a href="#" className="text-xl ml-20 text-white hover:text-gray-300">
-            <i className="fab fa-dribbble"></i>
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
       </div>
