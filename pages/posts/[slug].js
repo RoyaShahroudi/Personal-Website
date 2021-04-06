@@ -1,10 +1,15 @@
-import PostDetail from "../../components/posts/PostDetail";
 import Layout from "../../components/layout/Layout";
+import Title from "../../components/layout/Title";
+import PostDetail from "../../components/posts/PostDetail";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 const PostDetailPage = ({ post }) => {
   return (
     <Layout>
+    <Title
+        title={post.title}
+        description={post.excerpt}
+      />
       <PostDetail post={post} />
     </Layout>
   );
