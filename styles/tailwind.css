@@ -10,4 +10,20 @@
   .main-nav-li {
     @apply ml-5 text-center text-white hover:text-gray-300 transition duration-100;
   }
+  ,
+  .notification {
+    @apply fixed bottom-0 w-full;
+  }
+  ,
+  .pending {
+    @apply bg-primary;
+  }
+  ,
+  .error {
+    @apply bg-red-600;
+  }
+  ,
+  .success {
+    @apply bg-green-700;
+  }
 }
