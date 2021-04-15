@@ -1,15 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const postItem = (props) => {
   const { title, image, excerpt, date, slug } = props.post;
+
+  const router = useRouter();
+
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
   });
   const imagePath = `/images/posts/${slug}/${image}`;
+  // const imagePath = `/${router.locale === "fa"? "fa" : ""}/images/posts/${slug}/${image}`;
   const linkPath = `/posts/${slug}`;
+  // const linkPath = `/${router.locale === "fa"? "fa" : ""}/posts/${slug}`;
 
   return (
     <div className="bg-white rounded-xl relative hover:shadow-lg">
