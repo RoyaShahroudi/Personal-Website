@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from "react";
 
 import Notification from "../notification/Notification";
 
+import { useTranslation } from "next-i18next";
+
 async function sendContactData(enteredData) {
   const response = await fetch("/api/contact", {
     method: "POST",
@@ -24,6 +26,9 @@ const ContactForm = () => {
   const messageRef = useRef("");
   const [requestStatus, setrequestStatus] = useState();
   const [requestError, setrequestError] = useState();
+
+  const { t } = useTranslation("aboutPage");
+
 
   useEffect(() => {
     if (requestStatus === "success" || requestStatus === "error") {
@@ -88,10 +93,10 @@ const ContactForm = () => {
           <div className="grid place-content-center">
             <div>
               <h2 className="pb-2 text-gray-700 text-3xl font-bold tracking-widest">
-                Get in touch
+                {t("get-in-touch")}
               </h2>
               <h3 className="pb-7 text-gray-400 text-base tracking-wider text-center">
-                Feel free to contact me
+              {t("feel-free-to-contact-me")}
               </h3>
             </div>
             <form onSubmit={sendMessageHandler}>

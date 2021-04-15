@@ -3,6 +3,9 @@ import Title from "../../components/layout/Title";
 import PostDetail from "../../components/posts/PostDetail";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+
 const PostDetailPage = ({ post }) => {
   return (
     <Layout>
@@ -15,14 +18,14 @@ const PostDetailPage = ({ post }) => {
   );
 };
 
-export function getStaticProps(context) {
-  const { params } = context;
+export const getStaticProps = async ({ params, locale }) => {
   const { slug } = params;
 
   const postData = getPostData(slug);
 
   return {
     props: {
+      ...(await serverSideTranslations(locale, ["mainNavbar"])),
       post: postData,
     },
     revalidate: 600,

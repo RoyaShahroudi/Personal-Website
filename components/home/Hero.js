@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 const Hero = () => {
+  const { t } = useTranslation("common");
+
   return (
     <section className="h-screen flex justify-center content-center bg-gradient-to-b from-primary to-white ">
       <div className="container grid grid-cols-1 md:grid-cols-2 content-center">
@@ -9,9 +13,9 @@ const Hero = () => {
               <br />
               Developer
             </h1>
-            <h2 className="text-lg font-semibold pt-5">Hi, I'm</h2>
+            <h2 className="text-lg font-semibold pt-5">{t("hi-im")}</h2>
             <h1 className="text-2xl font-bold tracking-widest">
-              Roya Shahroudi
+            {t("roya-shahroudi")}
             </h1>
           </div>
         </div>

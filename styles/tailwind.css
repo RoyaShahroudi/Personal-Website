@@ -26,4 +26,7 @@
   .success {
     @apply bg-green-700;
   }
+  .active-lang {
+    @apply bg-footer  transition duration-300;
+  }
 }

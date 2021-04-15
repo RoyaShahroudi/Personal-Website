@@ -3,14 +3,19 @@ import Head from "next/head";
 import "../styles/tailwind.css";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
+import { appWithTranslation } from "next-i18next";
+
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
         <title>Roya Shahroudi</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="I post about programming and web development" />
-        <link rel="shortcut icon" type="image/png" href="/images/logo.png"/>
+        <meta
+          name="description"
+          content="I post about programming and web development"
+        />
+        <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -21,6 +26,6 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   );
-}
+};
 
-export default MyApp;
+export default appWithTranslation(MyApp);

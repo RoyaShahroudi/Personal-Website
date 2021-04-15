@@ -1,19 +1,27 @@
+import { useTranslation } from "next-i18next";
+
 const About = () => {
+  const { t } = useTranslation("common");
+
   return (
     <section className="bg-white py-16 grid place-items-center">
       <div className="container">
         <div>
-          <h2 className="py-4 text-2xl font-bold text-primary text-center">About Me</h2>
+          <h2 className="py-4 text-2xl font-bold text-primary text-center">
+            {t("aboat-me")}
+          </h2>
         </div>
         <div className="text-footer text-center text-lg">
           <p>
-            I’m a computer engineering student at the Babol Noshirvani<br />
-            University of Technology.<br /> I have a passion for learning new topics.<br />
-            Art and design are an integral part of my daily life.
+            {t("aboat-l1")}
+            <br />
+            {t("aboat-l2")}
+            <br />
+            {t("aboat-l3")}
+            <br />
+            {t("aboat-l4")}
           </p>
-          <p>
-            I'm interested in front-end web development and working with ReactJS.
-          </p>
+          <p>{t("aboat-l5")}</p>
         </div>
       </div>
     </section>
