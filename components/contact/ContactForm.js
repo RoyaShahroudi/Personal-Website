@@ -27,7 +27,7 @@ const ContactForm = () => {
   const [requestStatus, setrequestStatus] = useState();
   const [requestError, setrequestError] = useState();
 
-  const { t } = useTranslation("aboutPage");
+  const { t } = useTranslation("contactPage");
 
 
   useEffect(() => {
@@ -94,9 +94,11 @@ const ContactForm = () => {
             <div>
               <h2 className="pb-2 text-gray-700 text-3xl font-bold tracking-widest">
                 {t("get-in-touch")}
+                {/* Get in touch */}
               </h2>
               <h3 className="pb-7 text-gray-400 text-base tracking-wider text-center">
               {t("feel-free-to-contact-me")}
+              {/* Feel free to contact me */}
               </h3>
             </div>
             <form onSubmit={sendMessageHandler}>
@@ -105,7 +107,7 @@ const ContactForm = () => {
                   type="text"
                   ref={nameRef}
                   required
-                  placeholder="Name"
+                  placeholder={t("name")}
                   className="bg-gray-200 rounded-full placeholder-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent py-2 pl-3 w-50"
                 />
               </div>
@@ -114,7 +116,7 @@ const ContactForm = () => {
                   type="email"
                   ref={emailRef}
                   required
-                  placeholder="Email"
+                  placeholder={t("email")}
                   className="bg-gray-200 rounded-full placeholder-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent py-2 pl-3 w-50"
                 />
               </div>
@@ -123,7 +125,7 @@ const ContactForm = () => {
                   type="text"
                   ref={messageRef}
                   required
-                  placeholder="Message"
+                  placeholder={t("message")}
                   rows="5"
                   className="bg-gray-200 rounded-2xl placeholder-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent py-2 pl-3 w-50"
                 />
@@ -133,7 +135,7 @@ const ContactForm = () => {
                   type="submit"
                   className="bg-primary rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pointer hover:bg-footer transition duration-100 text-white p-2 w-full"
                 >
-                  Send
+                  {t("send")}
                 </button>
               </div>
             </form>
